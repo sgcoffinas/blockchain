@@ -56,7 +56,7 @@ class Blockchain(object):
     
     @staticmethod
     def valid_proof(last_proof, proof):
-        # A valid proof will have 4 trailing zeros
+        # A valid proof will have 4 leading zeros
         guess = f'{last_proof}{proof}'.encode()
         guess_hash = hashlib.sha256(guess).hexdigest()
         return guess_hash[:4] == "0000"
