@@ -9,7 +9,6 @@ class Blockchain(object):
     def __init__(self):
         self.chain = []
         self.current_transactions = []
-        self.chain = []
         self.nodes = set()
 
         # Create the genesis block
